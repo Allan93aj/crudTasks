@@ -1,0 +1,157 @@
+/* HEADER */
+.main{
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #D7DDE9;
+    width: 97%;
+    margin: 0 auto;
+    .logo{
+      width: 25%;
+    img{
+      width: 80px;
+      height: 80px;
+    }
+    }
+    .wellcome{
+      width: 50%;
+      text-align: center;
+      h2 span{
+        text-transform: capitalize;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29.04px;
+        letter-spacing: -0.02em;
+      }
+    }
+    .date{
+      width: 25%;
+      text-align: right;
+      .p{
+        text-transform: capitalize;
+        color: #0000008A;
+        font-size: 16px;
+        line-height: 19.36px;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}
+
+/* TAREFAS DE HOJE */
+.addnewtask{
+  max-width: 460px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  .wrappertasks{
+    border: 1px solid #EAECF0;
+    border-radius: 16px;
+    margin: 40px auto 24px;
+    text-align: center;
+    .addtarefa{
+      h3{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #0000008A;
+        margin: 32px auto 24px;
+      }
+      .taskList{
+        padding: 0 32px;
+        .taskItem{
+          list-style: none;
+          display: flex;
+          height: 56px;
+          padding: 16px;
+          gap: 16px;
+          border-radius: 8px;
+          border: 1.9px dashed #D7DDE9;
+          margin: 0 auto 24px;
+          .checkButton{
+            cursor: pointer;
+          }
+          .deleteButton{
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* TAREFAS FINALIZADAS */
+.completedTasks{
+  h3{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #0000008A;
+    margin: 32px auto 24px;
+  }
+  .taskList{
+    padding: 0 32px;
+    .taskItem{
+      list-style: none;
+        display: flex;
+        height: 56px;
+        padding: 16px;
+        gap: 16px;
+        border-radius: 8px;
+        border: 1.9px dashed #D7DDE9;
+        margin: 0 auto 24px;
+        text-decoration: line-through;
+        color: #D7DDE9;
+      .checkButton{
+          cursor: pointer;
+      }
+      .deleteButton{
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.addButton{
+  max-width: 450px;
+  background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+  width: 100%;
+  height: 51px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .buttonAddTask{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #fff;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    justify-content: center;
+    cursor: pointer;
+    img{
+      filter: invert(1);
+    }
+  }
+}
