@@ -1,3 +1,193 @@
+/* MODAL DE ENTRADA */
+.modalnome{
+  height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  .modalContent{
+    max-width: 450px;
+    background: #F7F9FD;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #EAECF0;
+    box-shadow: 4px 4px 11px 0px #EAECF0;
+    h2{
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+    form{
+      display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 250px;
+    width: 100%;
+      .input{
+        border: none;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+      .buttonPrimary{
+        padding: 16px;
+    background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+    font-size: 16px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+      }
+    }
+  }
+}
+
+/* MODAl NOVA TAREFA*/
+.modalnewtask{
+  display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #fffa;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+  .modalContent{
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #EAECF0;
+    box-shadow: 4px 4px 11px 0px #EAECF0;
+    h2{
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29.04px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.36px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+    .input{
+      max-width: 386px;
+      height: 51px;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #D7DDE9;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    .modalButtons{
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      .cancelar{
+        padding: 16px;
+        width: 50%;
+        border-radius: 8px;
+        background: #E7EEFB;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .adicionar{
+        padding: 16px;
+    width: 50%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+      }
+    }
+  }
+}
+
+/* MODAL DE DELETAR TAREFA */
+.modaldeletetask{
+  display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #fffa;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+  .modalContent{
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #EAECF0;
+    box-shadow: 4px 4px 11px 0px #EAECF0;
+    h2{
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29.04px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.36px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .input{
+      max-width: 386px;
+      height: 51px;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #D7DDE9;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    .modalButtons{
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      .cancelar{
+        padding: 16px;
+        width: 50%;
+        border-radius: 8px;
+        background: #E7EEFB;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .deletar{
+        padding: 16px;
+    width: 50%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #D30707 0%, #F05353 68.65%);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+      }
+    }
+  }
+}
+
 /* HEADER */
 .main{
   .header{
@@ -29,7 +219,7 @@
     .date{
       width: 25%;
       text-align: right;
-      .p{
+      p{
         text-transform: capitalize;
         color: #0000008A;
         font-size: 16px;
@@ -51,6 +241,9 @@
     border-radius: 16px;
     margin: 40px auto 24px;
     text-align: center;
+    &:empty {
+      border: none;
+    }
     .addtarefa{
       h3{
         font-size: 16px;
@@ -75,12 +268,17 @@
           .checkButton{
             cursor: pointer;
           }
-          .deleteButton{
+          .wrapperdeleteButton{
             display: flex;
-            flex-grow: 1;
-            justify-content: flex-end;
-            cursor: pointer;
+              flex-grow: 1;
+              justify-content: flex-end;
+            .deleteButton{
+              cursor: pointer;
+            }
           }
+        }
+        .taskItem:hover{
+          background: #F7F9FD;
         }
       }
     }
@@ -114,11 +312,13 @@
       .checkButton{
           cursor: pointer;
       }
-      .deleteButton{
+      .wrapperdeleteButton{
         display: flex;
-        flex-grow: 1;
-        justify-content: flex-end;
-        cursor: pointer;
+          flex-grow: 1;
+          justify-content: flex-end;
+        .deleteButton{
+          cursor: pointer;
+        }
       }
     }
   }

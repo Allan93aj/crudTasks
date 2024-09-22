@@ -150,7 +150,7 @@ interface Task {
         )}
   
         {isTaskModalOpen && (
-          <div className={styles.modal}>
+          <div className={styles.modalnewtask}>
             <div className={styles.modalContent}>
               <h2>Nova tarefa</h2>
               <p>Título</p>
@@ -177,9 +177,10 @@ interface Task {
   
         {/* Modal de confirmação para deletar a tarefa */}
         {isConfirmDeleteOpen && (
-          <div className={styles.modal}>
+          <div className={styles.modaldeletetask}>
             <div className={styles.modalContent}>
-              <h2>Tem certeza que deseja deletar essa tarefa?</h2>
+              <h2>Deletar tarefa</h2>
+              <p>Tem certeza que você deseja deletar essa tarefa?</p>
               <div className={styles.modalButtons}>
                 <button onClick={cancelDelete} className={styles.cancelar}>
                   Cancelar
@@ -225,9 +226,12 @@ interface Task {
                             <Image src={Checkboxvazia} alt="Marcar como concluída" />
                           </button>
                           {task.title}
+                          <div className={styles.wrapperdeleteButton}>
                           <button onClick={() => openConfirmDelete(task.id)} className={styles.deleteButton}>
                             <Image src={Trash} alt="Deletar" className={styles.trashIcon} />
                           </button>
+                          </div>
+                          
                         </li>
                       ))}
                     </ul>
@@ -246,9 +250,11 @@ interface Task {
                             <Image src={Checkboxpreenchido} alt="Desmarcar como concluída" />
                           </button>
                           {task.title}
+                          <div className={styles.wrapperdeleteButton}>
                           <button onClick={() => openConfirmDelete(task.id)} className={styles.deleteButton}>
                             <Image src={Trash} alt="Deletar" />
                           </button>
+                          </div>
                         </li>
                       ))}
                     </ul>
